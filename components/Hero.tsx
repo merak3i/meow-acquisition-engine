@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { siteConfig } from "@/lib/data";
 import { BackgroundPaths } from "@/components/ui/background-paths";
 import { GradientButton } from "@/components/ui/gradient-button";
-import HeroText from "@/components/ui/hero-shutter-text";
+
 
 const headlineWords =
   "Stop Burning Cash on Marketing That Doesn't Convert.".split(" ");
@@ -23,8 +23,7 @@ export default function Hero() {
       </div>
 
       <div className="max-w-[1400px] mx-auto w-full relative z-10 px-6 md:px-12 pt-24 pb-16">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-          {/* Left: Copy */}
+        <div>
           <div>
             {/* Eyebrow */}
             <motion.p
@@ -119,15 +118,6 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Right: MEOW shutter text */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="hidden lg:flex items-center justify-center h-[500px]"
-          >
-            <HeroText text="MEOW" />
-          </motion.div>
         </div>
 
         {/* Scroll indicator */}
