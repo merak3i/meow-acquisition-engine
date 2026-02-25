@@ -1,0 +1,142 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { siteConfig } from "@/lib/data";
+
+const sectionVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12 } },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+  },
+};
+
+export default function Authority() {
+  return (
+    <section
+      id="authority"
+      className="py-24 md:py-40 px-6 md:px-12 border-t border-surface-border"
+    >
+      <motion.div
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        className="max-w-[1400px] mx-auto"
+      >
+        <div className="grid md:grid-cols-2 gap-12 md:gap-24 items-center">
+          {/* Left: Visual block */}
+          <motion.div variants={itemVariants} className="relative">
+            <div className="aspect-[4/5] bg-surface-elevated border border-surface-border relative overflow-hidden">
+              {/* Abstract geometric element */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-64 h-64 md:w-80 md:h-80 relative">
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{
+                      duration: 20,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                    className="absolute inset-0 border border-accent-teal/20 rounded-full"
+                  />
+                  <motion.div
+                    animate={{ rotate: -360 }}
+                    transition={{
+                      duration: 30,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                    className="absolute inset-8 border border-accent-gold/20 rounded-full"
+                  />
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{
+                      duration: 15,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                    className="absolute inset-16 border border-text-dim/20 rounded-full"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-6xl md:text-7xl font-bold text-gradient-accent">
+                      VH
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Corner label */}
+              <span className="absolute top-6 left-6 text-label-sm text-text-dim uppercase tracking-widest">
+                Founder
+              </span>
+            </div>
+          </motion.div>
+
+          {/* Right: Copy */}
+          <div>
+            <motion.p
+              variants={itemVariants}
+              className="text-label-sm uppercase text-accent-teal tracking-[0.2em] mb-3"
+            >
+              The Architect
+            </motion.p>
+            <motion.h2
+              variants={itemVariants}
+              className="text-display-lg mb-8"
+            >
+              The Architect Behind the Systems.
+            </motion.h2>
+            <motion.p
+              variants={itemVariants}
+              className="text-body-lg text-text-muted mb-6"
+            >
+              I am Vismay Hegde. I build scalable revenue engines for brands. I
+              combine AI technology with ruthless performance marketing to
+              generate measurable outcomes.
+            </motion.p>
+            <motion.p
+              variants={itemVariants}
+              className="text-body-lg text-text-muted mb-10"
+            >
+              If you want pretty pictures, hire a design firm. If you want to
+              multiply your Annual Recurring Revenue, you work with us.
+            </motion.p>
+            <motion.a
+              variants={itemVariants}
+              href={siteConfig.social.linkedinPersonal}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-3 text-accent-teal hover:text-accent-gold transition-colors duration-300"
+            >
+              <span className="text-label-sm uppercase tracking-widest">
+                Connect with Vismay on LinkedIn
+              </span>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
+              >
+                <path
+                  d="M7 17L17 7M17 7H7M17 7V17"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </motion.a>
+          </div>
+        </div>
+      </motion.div>
+    </section>
+  );
+}
