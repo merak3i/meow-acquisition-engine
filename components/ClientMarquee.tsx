@@ -24,14 +24,14 @@ function LogoStrip() {
       {clientLogos.map((logo, i) => (
         <div
           key={`${logo.name}-${i}`}
-          className="flex-shrink-0 mx-8 md:mx-12 group"
+          className="flex-shrink-0 mx-8 md:mx-12 group flex items-center justify-center"
         >
           <Image
             src={logo.src}
             alt={logo.name}
-            width={140}
-            height={60}
-            className="h-10 md:h-14 w-auto object-contain filter grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+            width={120}
+            height={48}
+            className="h-8 md:h-10 w-auto max-w-[120px] object-contain filter grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 mix-blend-lighten"
             unoptimized
           />
         </div>
@@ -69,7 +69,7 @@ export default function ClientMarquee() {
         <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-surface to-transparent z-10" />
         <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-surface to-transparent z-10" />
 
-        <div className="flex animate-marquee w-fit">
+        <div className="flex items-center animate-marquee w-fit">
           <LogoStrip />
           <LogoStrip />
         </div>
@@ -80,7 +80,7 @@ export default function ClientMarquee() {
         <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-surface to-transparent z-10" />
         <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-surface to-transparent z-10" />
 
-        <div className="flex animate-marquee-reverse w-fit">
+        <div className="flex items-center animate-marquee-reverse w-fit">
           <LogoStrip />
           <LogoStrip />
         </div>

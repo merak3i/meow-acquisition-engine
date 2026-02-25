@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { siteConfig } from "@/lib/data";
 
 const sectionVariants = {
@@ -31,51 +32,48 @@ export default function Authority() {
         className="max-w-[1400px] mx-auto"
       >
         <div className="grid md:grid-cols-2 gap-12 md:gap-24 items-center">
-          {/* Left: Visual block */}
+          {/* Left: Avatar */}
           <motion.div variants={itemVariants} className="relative">
-            <div className="aspect-[4/5] bg-surface-elevated border border-surface-border relative overflow-hidden">
-              {/* Abstract geometric element */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-64 h-64 md:w-80 md:h-80 relative">
-                  <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{
-                      duration: 20,
-                      repeat: Infinity,
-                      ease: "linear",
-                    }}
-                    className="absolute inset-0 border border-accent-teal/20 rounded-full"
-                  />
-                  <motion.div
-                    animate={{ rotate: -360 }}
-                    transition={{
-                      duration: 30,
-                      repeat: Infinity,
-                      ease: "linear",
-                    }}
-                    className="absolute inset-8 border border-accent-gold/20 rounded-full"
-                  />
-                  <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{
-                      duration: 15,
-                      repeat: Infinity,
-                      ease: "linear",
-                    }}
-                    className="absolute inset-16 border border-text-dim/20 rounded-full"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-6xl md:text-7xl font-bold text-gradient-accent">
-                      VH
-                    </span>
-                  </div>
-                </div>
+            <div className="aspect-[4/5] bg-surface-elevated border border-surface-border relative overflow-hidden rounded-sm">
+              {/* Avatar image — cropped as headshot, face centered */}
+              <div className="absolute inset-0">
+                <Image
+                  src="/vismay-avatar.png"
+                  alt="Vismay Hegde"
+                  fill
+                  className="object-cover object-[center_25%]"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
               </div>
 
+              {/* Subtle gradient overlay at bottom for clean crop */}
+              <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-surface-elevated to-transparent" />
+
               {/* Corner label */}
-              <span className="absolute top-6 left-6 text-label-sm text-text-dim uppercase tracking-widest">
+              <span className="absolute top-6 left-6 text-label-sm text-text-dim uppercase tracking-widest z-10">
                 Founder
               </span>
+
+              {/* Rotating ring accents behind avatar */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{
+                  duration: 20,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+                className="absolute -bottom-20 -right-20 w-64 h-64 border border-accent-teal/10 rounded-full pointer-events-none"
+              />
+              <motion.div
+                animate={{ rotate: -360 }}
+                transition={{
+                  duration: 30,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+                className="absolute -top-16 -left-16 w-48 h-48 border border-accent-gold/10 rounded-full pointer-events-none"
+              />
             </div>
           </motion.div>
 
