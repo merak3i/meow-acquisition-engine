@@ -120,29 +120,30 @@ export default function Hero() {
 
         </div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2, duration: 1 }}
-          className="absolute bottom-8 left-6 md:left-12 flex items-center gap-3"
-        >
-          <div className="w-px h-12 bg-text-dim relative overflow-hidden">
-            <motion.div
-              animate={{ y: ["-100%", "100%"] }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="absolute inset-0 bg-accent-teal"
-            />
-          </div>
-          <span className="text-label-sm text-text-dim uppercase tracking-widest">
-            Scroll
-          </span>
-        </motion.div>
       </div>
+
+      {/* Scroll indicator — right center */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2, duration: 1 }}
+        className="absolute right-8 md:right-12 top-1/2 -translate-y-1/2 flex flex-col items-center gap-3 z-10"
+      >
+        <span className="text-label-sm text-text-dim uppercase tracking-widest [writing-mode:vertical-lr]">
+          Scroll
+        </span>
+        <div className="w-px h-12 bg-text-dim relative overflow-hidden">
+          <motion.div
+            animate={{ y: ["-100%", "100%"] }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute inset-0 bg-accent-teal"
+          />
+        </div>
+      </motion.div>
     </section>
   );
 }
