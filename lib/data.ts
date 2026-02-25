@@ -3,12 +3,12 @@ export const siteConfig = {
   email: "mewdiaservice@gmail.com",
   calendly: "https://calendly.com/mewdiaservice/30min",
   social: {
-    instagram: "https://www.instagram.com/meowcreativehaus/",
+    instagram: "https://www.instagram.com/m3ow.ai/",
     linkedinCompany:
       "https://www.linkedin.com/company/105362259/admin/dashboard/",
     linkedinPersonal: "https://www.linkedin.com/in/vismay-h-b9a89a81gde/",
     linktree: "https://linktr.ee/vismay9",
-    twitter: "https://twitter.com/meowcreativehaus",
+    twitter: "https://x.com/m3ow_ai",
   },
 } as const;
 
