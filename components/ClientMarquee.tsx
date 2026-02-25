@@ -24,14 +24,14 @@ function LogoStrip() {
       {clientLogos.map((logo, i) => (
         <div
           key={`${logo.name}-${i}`}
-          className="flex-shrink-0 mx-8 md:mx-12 group flex items-center justify-center"
+          className="flex-shrink-0 mx-8 md:mx-12 group flex items-center justify-center h-12"
         >
           <Image
             src={logo.src}
             alt={logo.name}
-            width={120}
+            width={140}
             height={48}
-            className="h-8 md:h-10 w-auto max-w-[120px] object-contain filter grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 mix-blend-lighten"
+            className="h-8 md:h-10 w-auto max-w-[140px] object-contain invert grayscale opacity-40 group-hover:opacity-80 transition-all duration-500"
             unoptimized
           />
         </div>
