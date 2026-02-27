@@ -9,7 +9,7 @@ export const siteConfig = {
     linkedinPersonal: "https://www.linkedin.com/in/vismay-h-b9a89a81gde/",
     linktree: "https://linktr.ee/vismay9",
     twitter: "https://x.com/m3ow_ai",
-    github: "https://github.com/VismayHegde",
+    github: "https://github.com/merak3i",
   },
 } as const;
 
