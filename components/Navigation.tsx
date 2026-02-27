@@ -128,6 +128,14 @@ export default function Navigation() {
               >
                 TW
               </a>
+              <a
+                href={siteConfig.social.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-text-dim hover:text-text transition-colors text-sm"
+              >
+                GH
+              </a>
             </motion.div>
           </motion.div>
         )}

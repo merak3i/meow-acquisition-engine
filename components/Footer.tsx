@@ -8,6 +8,7 @@ const footerLinks = [
   { label: "LinkedIn", href: siteConfig.social.linkedinPersonal },
   { label: "Twitter", href: siteConfig.social.twitter },
   { label: "Linktree", href: siteConfig.social.linktree },
+  { label: "GitHub", href: siteConfig.social.github },
 ];
 
 export default function Footer() {
