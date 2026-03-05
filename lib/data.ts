@@ -62,6 +62,10 @@ export const clientLogos = [
     name: "Rhyth Jain",
     src: "https://meowcreativehaus.lovable.app/lovable-uploads/rhyth-jain-logo.png",
   },
+  {
+    name: "BergLabs.ai",
+    src: "/berg-logo.svg",
+  },
 ] as const;
 
 export const offers = [
