@@ -25,10 +25,12 @@ export const clientLogos = [
   {
     name: "Active Power",
     src: "https://meowcreativehaus.lovable.app/lovable-uploads/69925ab5-3c33-482a-9561-5eb05acbc182.png",
+    scale: 1.4,
   },
   {
     name: "Asset Mantle",
     src: "https://meowcreativehaus.lovable.app/lovable-uploads/229aac74-3415-4b4d-8638-01cde5697f70.png",
+    scale: 1.4,
   },
   {
     name: "Ingrained Logic",
@@ -45,6 +47,8 @@ export const clientLogos = [
   {
     name: "Mantle Works",
     src: "https://meowcreativehaus.lovable.app/lovable-uploads/1af13004-dd8f-444c-a10b-c5a2573ab542.png",
+    scale: 1.4,
+    hasBg: true,
   },
   {
     name: "JB & Co",

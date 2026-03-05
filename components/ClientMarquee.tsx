@@ -21,21 +21,31 @@ const headerVariants = {
 function LogoStrip() {
   return (
     <>
-      {clientLogos.map((logo, i) => (
-        <div
-          key={`${logo.name}-${i}`}
-          className="flex-shrink-0 mx-8 md:mx-12 group flex items-center justify-center h-12"
-        >
-          <Image
-            src={logo.src}
-            alt={logo.name}
-            width={140}
-            height={48}
-            className="h-8 md:h-10 w-auto max-w-[140px] object-contain invert grayscale opacity-40 group-hover:opacity-100 group-hover:drop-shadow-[0_0_12px_rgba(73,197,182,0.7)] transition-all duration-500"
-            unoptimized
-          />
-        </div>
-      ))}
+      {clientLogos.map((logo, i) => {
+        const scale = ("scale" in logo ? logo.scale : 1) as number;
+        const hasBg = "hasBg" in logo && logo.hasBg;
+
+        return (
+          <div
+            key={`${logo.name}-${i}`}
+            className={`flex-shrink-0 mx-8 md:mx-12 group flex items-center justify-center h-12 ${
+              hasBg ? "bg-white/10 rounded-md px-4 py-2" : ""
+            }`}
+          >
+            <Image
+              src={logo.src}
+              alt={logo.name}
+              width={140}
+              height={48}
+              className="w-auto max-w-[140px] object-contain invert grayscale opacity-40 group-hover:opacity-100 group-hover:drop-shadow-[0_0_12px_rgba(73,197,182,0.7)] transition-all duration-500"
+              style={{
+                height: `${(scale ?? 1) * 2.5}rem`,
+              }}
+              unoptimized
+            />
+          </div>
+        );
+      })}
     </>
   );
 }
