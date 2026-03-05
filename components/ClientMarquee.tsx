@@ -64,23 +64,12 @@ export default function ClientMarquee() {
         </motion.h2>
       </motion.div>
 
-      {/* Marquee Row 1 */}
+      {/* Single marquee row — right to left */}
       <div className="relative">
         <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-surface to-transparent z-10" />
         <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-surface to-transparent z-10" />
 
         <div className="flex items-center animate-marquee w-fit">
-          <LogoStrip />
-          <LogoStrip />
-        </div>
-      </div>
-
-      {/* Marquee Row 2 (reverse) */}
-      <div className="relative mt-8">
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-surface to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-surface to-transparent z-10" />
-
-        <div className="flex items-center animate-marquee-reverse w-fit">
           <LogoStrip />
           <LogoStrip />
         </div>
