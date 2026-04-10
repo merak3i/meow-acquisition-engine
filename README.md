@@ -27,12 +27,4 @@ Redesigned marketing website for Meow Creative Haus -- an AI-driven revenue engi
 - **Calendly**: calendly.com/mewdiaservice/30min
 - **Lovable CDN**: Client logos hosted at meowcreativehaus.lovable.app
 
-## Setup
 
-```bash
-npm install
-npm run dev       # next dev
-npm run build     # next build
-```
-
-No environment variables needed. All config is hardcoded in `lib/data.ts`.
