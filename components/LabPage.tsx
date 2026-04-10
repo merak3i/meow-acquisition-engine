@@ -70,45 +70,45 @@ export default function LabPage() {
           className="border border-surface-border bg-surface-elevated p-8 md:p-12 mb-8"
         >
           {/* Header */}
-          <div className="flex flex-wrap items-center gap-3 mb-3">
-            <h2 className="text-display-md text-accent-teal">{project.name}</h2>
-            <span className="text-label-sm text-text-dim border border-surface-border px-2 py-0.5">v1.3.0</span>
-            <span className="text-label-sm text-accent-teal border border-accent-teal/30 px-2 py-0.5">LIVE · MIT</span>
+          <div className="flex flex-wrap items-center gap-2 mb-2">
+            <h2 className="text-lg font-semibold text-accent-teal">{project.name}</h2>
+            <span className="text-[10px] text-text-dim border border-surface-border px-1.5 py-0.5">v1.3.0</span>
+            <span className="text-[10px] text-accent-teal border border-accent-teal/30 px-1.5 py-0.5">LIVE · MIT</span>
           </div>
-          <p className="text-body-lg text-text-muted mb-10">{project.tagline}</p>
+          <p className="text-sm text-text-muted mb-6">{project.tagline}</p>
 
           {/* Feature columns */}
-          <div className="grid md:grid-cols-3 gap-8 mb-10 pb-10 border-b border-surface-border">
+          <div className="grid md:grid-cols-3 gap-5 mb-6 pb-6 border-b border-surface-border">
             {FEATURES.map((f) => (
               <div key={f.title}>
-                <span className="text-2xl block mb-3">{f.icon}</span>
-                <h3 className="text-body-md font-semibold mb-2">{f.title}</h3>
-                <p className="text-body-md text-text-muted">{f.desc}</p>
+                <span className="text-base block mb-2">{f.icon}</span>
+                <h3 className="text-xs font-semibold mb-1">{f.title}</h3>
+                <p className="text-xs text-text-muted leading-relaxed">{f.desc}</p>
               </div>
             ))}
           </div>
 
           {/* Install block */}
-          <p className="text-label-sm uppercase text-text-dim tracking-[0.15em] mb-3">
+          <p className="text-[10px] uppercase text-text-dim tracking-[0.15em] mb-2">
             Install in 2 minutes — no account needed
           </p>
-          <div className="bg-surface border border-surface-border font-mono text-sm text-text-muted p-5 mb-8 overflow-x-auto">
+          <div className="bg-surface border border-surface-border font-mono text-xs text-text-muted p-4 mb-5 overflow-x-auto">
             <p><span className="text-accent-teal">$</span> git clone https://github.com/merak3i/meow-ops.git</p>
             <p><span className="text-accent-teal">$</span> cd meow-ops &amp;&amp; npm install</p>
             <p><span className="text-accent-teal">$</span> node sync/export-local.mjs &amp;&amp; npm run dev</p>
           </div>
-          <p className="text-label-sm text-text-dim mb-8">
+          <p className="text-[11px] text-text-dim mb-6">
             Open <span className="text-text-muted font-mono">http://localhost:5173</span>. Your sessions load immediately.
             Install as a desktop app via Chrome → address bar → install icon.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-wrap gap-4 mb-10">
+          <div className="flex flex-wrap gap-3 mb-6">
             <a
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-accent-teal text-surface text-label-sm uppercase tracking-wider hover:bg-accent-teal/90 transition-colors duration-300"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent-teal text-surface text-[11px] uppercase tracking-wider hover:bg-accent-teal/90 transition-colors duration-300"
             >
               Try demo →
             </a>
@@ -116,7 +116,7 @@ export default function LabPage() {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-accent-gold/50 text-accent-gold text-label-sm uppercase tracking-wider hover:border-accent-gold hover:bg-accent-gold/5 transition-all duration-300"
+              className="inline-flex items-center gap-2 px-5 py-2.5 border border-accent-gold/50 text-accent-gold text-[11px] uppercase tracking-wider hover:border-accent-gold hover:bg-accent-gold/5 transition-all duration-300"
             >
               ★ Star on GitHub
             </a>
@@ -125,7 +125,7 @@ export default function LabPage() {
           {/* What's coming */}
           <button
             onClick={() => setComingOpen((o) => !o)}
-            className="flex items-center gap-2 text-label-sm uppercase text-text-dim hover:text-text transition-colors duration-300 tracking-wider mb-4"
+            className="flex items-center gap-2 text-[10px] uppercase text-text-dim hover:text-text transition-colors duration-300 tracking-wider mb-3"
           >
             <span>What&apos;s coming</span>
             <span
@@ -136,9 +136,9 @@ export default function LabPage() {
             </span>
           </button>
           {comingOpen && (
-            <ul className="space-y-3 border-l-2 border-surface-border pl-5">
+            <ul className="space-y-2 border-l-2 border-surface-border pl-4">
               {COMING.map((item, i) => (
-                <li key={i} className="text-body-md text-text-muted">{item}</li>
+                <li key={i} className="text-xs text-text-muted">{item}</li>
               ))}
             </ul>
           )}
