@@ -114,6 +114,35 @@ export const openSourceProjects = [
   },
 ] as const;
 
+export const aiCampaigns = [
+  {
+    client: "Asset Mantle",
+    niche: "blockchain",
+    nicheLabel: "Blockchain · Web3",
+    videoId: "PLACEHOLDER_AM",
+    title: "AI spokesperson for NFT launchpad",
+    description: "Synthetic presenter delivering product narrative to Web3 founders at scale.",
+  },
+  {
+    client: "Active Power",
+    niche: "fitness",
+    nicheLabel: "Fitness · Performance",
+    videoId: "PLACEHOLDER_AP",
+    title: "AI brand ambassador for supplement launch",
+    description: "Custom AI model carrying campaign messaging without a studio or shoot day.",
+  },
+  {
+    client: "Resonance Security",
+    niche: "security",
+    nicheLabel: "Cybersecurity",
+    videoId: "PLACEHOLDER_RS",
+    title: "Threat advisory AI presenter",
+    description: "Authoritative AI voice used for security awareness content across channels.",
+  },
+] as const;
+
+export type AICampaign = (typeof aiCampaigns)[number];
+
 export interface SubstackPost {
   title: string;
   link: string;

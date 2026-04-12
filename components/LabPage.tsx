@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { openSourceProjects } from "@/lib/data";
+import AIModelsShowcase from "@/components/AIModelsShowcase";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -153,6 +154,9 @@ export default function LabPage() {
           · MIT License · Free forever
         </p>
       </div>
+
+      {/* AI Models Showcase — full width, outside the narrow max-w-[1000px] container */}
+      <AIModelsShowcase />
     </main>
   );
 }
