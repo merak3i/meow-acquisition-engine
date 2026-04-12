@@ -29,6 +29,8 @@ interface FocusRailProps {
    * "landscape" → aspect-video  cards ~520px wide  (YouTube 16:9)
    */
   orientation?: "portrait" | "landscape";
+  /** Label for the external link CTA. Defaults to "Watch". */
+  ctaLabel?: string;
   className?: string;
 }
 
@@ -56,6 +58,7 @@ export function FocusRail({
   autoPlay = false,
   interval = 4000,
   orientation = "portrait",
+  ctaLabel = "Watch",
   className,
 }: FocusRailProps) {
   const [active, setActive]     = React.useState(initialIndex);
@@ -221,8 +224,10 @@ export function FocusRail({
                   if (offset !== 0) {
                     setActive((p) => p + offset);
                     setPlayingId(null);
-                  } else if (isCenter && !isPlaying && !isPlaceholder) {
+                  } else if (isCenter && !isPlaceholder) {
                     setPlayingId(item.id);
+                  } else if (isCenter && isPlaceholder && item.href) {
+                    window.open(item.href, "_blank", "noopener,noreferrer");
                   }
                 }}
               >
@@ -354,7 +359,7 @@ export function FocusRail({
                 rel="noopener noreferrer"
                 className="group flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition-transform hover:scale-105 active:scale-95"
               >
-                Watch
+                {ctaLabel}
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </Link>
             )}
