@@ -197,7 +197,11 @@ export function FocusRail({
             const isCenter      = offset === 0;
             const dist          = Math.abs(offset);
             const isPlaying     = isCenter && playingId === item.id;
-            const isPlaceholder = !item.videoId || item.videoId.startsWith("PLACEHOLDER");
+            // An item is a real placeholder only when it has no image at all
+            // (e.g. aiCampaigns with imageSrc:""). Items with imageSrc but no
+            // videoId (e.g. client-website screenshots) are NOT placeholders.
+            const isPlaceholder = !item.imageSrc;
+            const hasRealVideo  = Boolean(item.videoId && !item.videoId.startsWith("PLACEHOLDER"));
 
             return (
               <motion.div
@@ -224,9 +228,9 @@ export function FocusRail({
                   if (offset !== 0) {
                     setActive((p) => p + offset);
                     setPlayingId(null);
-                  } else if (isCenter && !isPlaceholder) {
+                  } else if (isCenter && hasRealVideo) {
                     setPlayingId(item.id);
-                  } else if (isCenter && isPlaceholder && item.href) {
+                  } else if (isCenter && !isPlaceholder && item.href) {
                     window.open(item.href, "_blank", "noopener,noreferrer");
                   }
                 }}
@@ -276,7 +280,7 @@ export function FocusRail({
                     <div className="absolute inset-0 rounded-2xl bg-black/10 pointer-events-none mix-blend-multiply" />
 
                     {/* Play button — center card, real video only */}
-                    {isCenter && !isPlaceholder && (
+                    {isCenter && hasRealVideo && (
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="w-14 h-14 rounded-full bg-black/70 border border-white/20 flex items-center justify-center group-hover:scale-110 group-hover:border-[#49c5b6] transition-all duration-300 backdrop-blur-sm">
                           <div
