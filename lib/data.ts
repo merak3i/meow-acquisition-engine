@@ -352,7 +352,7 @@ export const featuredArticles = [
     nicheLabel: "Blockchain · RWA",
     platform: "linkedin" as const,
     href: "https://www.linkedin.com/pulse/ledgers-liquidity-latticework-unpacking-stablecoin-sovereignties-c0gvc/",
-    coverImage: "https://media.licdn.com/dms/image/v2/D5612AQF0MkNRloOfkw/article-cover_image-shrink_720_1280/B56ZhCQEtrHcAM-/0/1753458189350?e=2147483647&v=beta&t=JjAePmCGHkxU9ezZpuCNvDoSsaAHuTP_nZrKXUEXDCKL3eg",
+    coverImage: "https://media.licdn.com/dms/image/v2/D5612AQF0MkNRloOfkw/article-cover_image-shrink_720_1280/B56ZhCQEtrHcAM-/0/1753458189350?e=2147483647&v=beta&t=JjAePmCGHkxU9ezZpuCNvDoSsaAHuTP_nZfzQpKL3eg",
   },
 ] as const;
 
