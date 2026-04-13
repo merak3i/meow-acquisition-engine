@@ -6,6 +6,7 @@ import { openSourceProjects } from "@/lib/data";
 import AIModelsShowcase from "@/components/AIModelsShowcase";
 import ArticleShowcase from "@/components/ArticleShowcase";
 import ClientWebsites from "@/components/ClientWebsites";
+import VideoShowcase from "@/components/VideoShowcase";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -165,6 +166,9 @@ export default function LabPage() {
 
       {/* Client Websites Carousel */}
       <ClientWebsites />
+
+      {/* Video Showcase Carousel */}
+      <VideoShowcase />
     </main>
   );
 }

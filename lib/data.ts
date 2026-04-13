@@ -365,7 +365,7 @@ export const clientWebsites = [
     name: "Manipal Aerosports",
     tagline: "Aviation training & airshow brand",
     url: "https://manipalaerosports.lovable.app/",
-    screenshot: "https://image.thum.io/get/width/1200/crop/800/https://manipalaerosports.lovable.app/",
+    screenshot: "https://image.thum.io/get/width/1200/crop/675/https://manipalaerosports.lovable.app/",
     industry: "Aviation",
     logo: LOGOS.manipalAerosports,
   },
@@ -381,13 +381,69 @@ export const clientWebsites = [
     name: "JB & Co Law",
     tagline: "Legal services — modern practice site",
     url: "https://jbandcolaw.vercel.app/",
-    screenshot: "https://image.thum.io/get/width/1200/crop/800/https://jbandcolaw.vercel.app/",
+    screenshot: "https://image.thum.io/get/width/1200/crop/840/https://jbandcolaw.vercel.app/",
     industry: "Legal",
     logo: "",
   },
 ] as const;
 
 export type ClientWebsite = (typeof clientWebsites)[number];
+
+// ─── Client Videos ────────────────────────────────────────────────────────────
+
+export type ClientVideo = {
+  client: string;
+  videoId: string;
+  title: string;
+  description: string;
+  /** "Video Marketing" | "AI Model" | "AI Podcast" */
+  tag: string;
+};
+
+export const clientVideos: ClientVideo[] = [
+  {
+    client: "Active Power",
+    videoId: "kkSUicrnRHM",
+    title: "Active Power",
+    description: "High-performance video campaign for an industrial energy brand.",
+    tag: "Video Marketing",
+  },
+  {
+    client: "Active Power",
+    videoId: "2HWmE4hRqR4",
+    title: "Active Power",
+    description: "High-performance video campaign for an industrial energy brand.",
+    tag: "Video Marketing",
+  },
+  {
+    client: "Asset Mantle",
+    videoId: "5CYGxM9emo4",
+    title: "Asset Mantle",
+    description: "AI-generated spokesperson for AssetMantle's Web3 platform.",
+    tag: "AI Model",
+  },
+  {
+    client: "Ingrained Logic",
+    videoId: "gBlE3XpGmwU",
+    title: "Ingrained Logic",
+    description: "Brand video campaign communicating core product value.",
+    tag: "Video Marketing",
+  },
+  {
+    client: "Mantle Works",
+    videoId: "--3EhPjznAg",
+    title: "Mantle Works",
+    description: "AI podcast — Web3 and RWA insights.",
+    tag: "AI Podcast",
+  },
+  {
+    client: "Mantle Works",
+    videoId: "WroSa1eiUbU",
+    title: "Mantle Works",
+    description: "AI podcast — Web3 and RWA insights.",
+    tag: "AI Podcast",
+  },
+];
 
 export interface SubstackPost {
   title: string;

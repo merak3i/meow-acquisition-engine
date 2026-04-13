@@ -9,6 +9,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-04-14
+
+### Added
+- `components/VideoShowcase.tsx` — new **Video & Media Production** carousel section on `/lab` page
+  - 6 client videos across three tagged categories: `Video Marketing`, `AI Model`, `AI Podcast`
+  - Sub-section card selector UI: four interactive cards (All Formats / Video Marketing / AI Model / AI Podcast) each with eyebrow, label, descriptor, and active top-bar indicator
+  - `AnimatePresence`-driven body copy that swaps in on category change
+  - FocusRail 3D landscape carousel wired to active filter; `key` prop forces remount + index reset on switch
+  - Inline YouTube nocookie embed on center-card click; fallback to `hqdefault.jpg` thumbnail on `maxresdefault` 404
+- `lib/data.ts` — `ClientVideo` type and `clientVideos` array
+  - Active Power × 2 (`kkSUicrnRHM`, `2HWmE4hRqR4`) tagged `Video Marketing`
+  - Asset Mantle × 1 (`5CYGxM9emo4`) tagged `AI Model`
+  - Ingrained Logic × 1 (`gBlE3XpGmwU`) tagged `Video Marketing`
+  - Mantle Works × 2 (`--3EhPjznAg`, `WroSa1eiUbU`) tagged `AI Podcast`
+
+### Changed
+- `components/LabPage.tsx` — import and mount `<VideoShowcase />` after `<ClientWebsites />`
+- `lib/data.ts` — Manipal Aerosports screenshot upgraded to 16:9 crop (`width/1200/crop/675`) for cinematic hero framing
+- `lib/data.ts` — JB & Co Law screenshot upgraded to taller crop (`width/1200/crop/840`) to expose more above-the-fold content
+- `VideoShowcase` section copy: headline *"Content at every frequency."*, premium sub-section descriptors, CTA copy *"Get a production brief →"*
+
 ## [1.1.0] - 2026-04-09
 
 ### Removed
