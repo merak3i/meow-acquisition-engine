@@ -423,6 +423,13 @@ export const clientVideos: ClientVideo[] = [
     tag: "AI Model",
   },
   {
+    client: "Asset Mantle",
+    videoId: "RgQ35W-Yq08",
+    title: "Asset Mantle",
+    description: "AI-generated spokesperson for AssetMantle's Web3 platform.",
+    tag: "AI Model",
+  },
+  {
     client: "Ingrained Logic",
     videoId: "gBlE3XpGmwU",
     title: "Ingrained Logic",
