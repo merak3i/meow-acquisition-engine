@@ -450,6 +450,13 @@ export const clientVideos: ClientVideo[] = [
     description: "AI podcast — Web3 and RWA insights.",
     tag: "AI Podcast",
   },
+  {
+    client: "Meow World Order (MCH)",
+    videoId: "QDjZwuR6tIQ",
+    title: "Meow World Order",
+    description: "AI podcast by Meow Creative Haus.",
+    tag: "AI Podcast",
+  },
 ];
 
 export interface SubstackPost {
