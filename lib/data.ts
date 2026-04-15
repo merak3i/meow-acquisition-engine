@@ -72,6 +72,12 @@ export const clientLogos = [
     src: "/berg-logo.svg",
     noInvert: true,
   },
+  {
+    name: "Canter Club",
+    src: "/canter-club-logo.png",
+    scale: 1.6,
+    noInvert: true,
+  },
 ] as const;
 
 export const offers = [
@@ -366,7 +372,7 @@ export const clientWebsites = [
     name: "Manipal Aerosports",
     tagline: "Aviation training & airshow brand",
     url: "https://manipalaerosports.lovable.app/",
-    screenshot: "https://image.thum.io/get/width/1200/crop/675/https://manipalaerosports.lovable.app/",
+    screenshot: "/screenshots/manipal-aerosports.png",
     industry: "Aviation",
     logo: LOGOS.manipalAerosports,
   },
@@ -382,7 +388,7 @@ export const clientWebsites = [
     name: "JB & Co Law",
     tagline: "Legal services — modern practice site",
     url: "https://jbandcolaw.vercel.app/",
-    screenshot: "https://image.thum.io/get/width/1200/crop/840/https://jbandcolaw.vercel.app/",
+    screenshot: "/screenshots/jb-co-law.png",
     industry: "Legal",
     logo: "",
   },

@@ -160,11 +160,11 @@ export default function LabPage() {
       {/* Video Showcase Carousel — landscape, long-form */}
       <VideoShowcase />
 
-      {/* Shorts Showcase — portrait, vertical short-form */}
-      <ShortsShowcase />
-
       {/* Client Websites Carousel */}
       <ClientWebsites />
+
+      {/* Shorts Showcase — portrait, vertical short-form */}
+      <ShortsShowcase />
     </main>
   );
 }

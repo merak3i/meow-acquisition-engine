@@ -115,7 +115,9 @@ gh pr create --base main --head hotfix/rollback-to-v1.0.0 \
 
 | Tag | SHA | Date | Description |
 |-----|-----|------|-------------|
-| `v1.1.0` | _(current)_ | 2026-04-09 | Engineering hardening — dead code cleanup, DB scaffolding |
+| `v1.3.0` | _(current)_ | 2026-04-15 | Local screenshots, Canter Club marquee, Web Design section reorder |
+| `v1.2.1` | | 2026-04-14 | VideoShowcase promoted, AIModelsShowcase removed |
+| `v1.1.0` | | 2026-04-09 | Engineering hardening — dead code cleanup, DB scaffolding |
 | `v1.0.0` | `2256e7d` | 2026-04-07 | Production baseline — fully functional acquisition engine |
 
 ---

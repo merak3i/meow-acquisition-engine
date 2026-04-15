@@ -9,6 +9,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-04-15
+
+### Added
+- `public/screenshots/manipal-aerosports.png` — local hero screenshot for Manipal Aerosports web design card
+- `public/screenshots/jb-co-law.png` — local hero screenshot for JB & Co Law web design card
+- `public/canter-club-logo.png` — Canter Club Bengaluru circular logo (drop file to activate)
+- `lib/data.ts` — Canter Club added to `clientLogos` marquee (`scale: 1.6`, `noInvert: true`)
+
+### Changed
+- `lib/data.ts` — Manipal Aerosports screenshot switched from `image.thum.io` URL to local `/screenshots/manipal-aerosports.png`
+- `lib/data.ts` — JB & Co Law screenshot switched from `image.thum.io` URL to local `/screenshots/jb-co-law.png`
+- `components/LabPage.tsx` — `ClientWebsites` ("Brands built to convert") promoted above `ShortsShowcase` ("Every second earned")
+
 ## [1.2.1] - 2026-04-14
 
 ### Changed
