@@ -73,9 +73,9 @@ export const clientLogos = [
     noInvert: true,
   },
   {
-    name: "Canter Club",
-    src: "/canter-club-logo.png",
-    scale: 1.6,
+    name: "CanterClub",
+    src: "",
+    isText: true,
     noInvert: true,
   },
 ] as const;

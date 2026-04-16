@@ -18,32 +18,45 @@ const headerVariants = {
   },
 };
 
+// Base logo height — all image logos scale from this value
+const BASE_REM = 3.75; // 2.5rem × 1.5 = 50 % bigger
+
 function LogoStrip() {
   return (
     <>
       {clientLogos.map((logo, i) => {
-        const scale = ("scale" in logo ? logo.scale : 1) as number;
-        const hasBg = "hasBg" in logo && logo.hasBg;
+        const scale    = ("scale"    in logo ? logo.scale    : 1)     as number;
+        const hasBg    = "hasBg"    in logo && logo.hasBg;
         const noInvert = "noInvert" in logo && logo.noInvert;
+        const isText   = "isText"   in logo && logo.isText;
 
         return (
           <div
             key={`${logo.name}-${i}`}
-            className={`flex-shrink-0 mx-8 md:mx-12 group flex items-center justify-center h-12 ${
+            className={`flex-shrink-0 mx-8 md:mx-12 group flex items-center justify-center h-16 ${
               hasBg ? "bg-white/10 rounded-md px-4 py-2" : ""
             }`}
           >
-            <Image
-              src={logo.src}
-              alt={logo.name}
-              width={140}
-              height={48}
-              className={`w-auto max-w-[140px] object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:drop-shadow-[0_0_12px_rgba(73,197,182,0.7)] transition-all duration-500${noInvert ? "" : " invert"}`}
-              style={{
-                height: `${(scale ?? 1) * 2.5}rem`,
-              }}
-              unoptimized
-            />
+            {isText ? (
+              /* ── Text wordmark (e.g. CanterClub) ── */
+              <span
+                className="font-semibold tracking-tight text-white opacity-40 group-hover:opacity-100 group-hover:drop-shadow-[0_0_12px_rgba(73,197,182,0.7)] transition-all duration-500 whitespace-nowrap select-none"
+                style={{ fontSize: "2rem", letterSpacing: "-0.04em" }}
+              >
+                {logo.name}
+              </span>
+            ) : (
+              /* ── Image logo ── */
+              <Image
+                src={logo.src}
+                alt={logo.name}
+                width={160}
+                height={64}
+                className={`w-auto max-w-[160px] object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:drop-shadow-[0_0_12px_rgba(73,197,182,0.7)] transition-all duration-500${noInvert ? "" : " invert"}`}
+                style={{ height: `${scale * BASE_REM}rem` }}
+                unoptimized
+              />
+            )}
           </div>
         );
       })}
