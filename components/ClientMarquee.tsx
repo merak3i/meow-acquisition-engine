@@ -29,6 +29,7 @@ function LogoStrip() {
         const hasBg    = "hasBg"    in logo && logo.hasBg;
         const noInvert = "noInvert" in logo && logo.noInvert;
         const isText   = "isText"   in logo && logo.isText;
+        const preserveColor = "preserveColor" in logo && logo.preserveColor;
 
         return (
           <div
@@ -52,7 +53,9 @@ function LogoStrip() {
                 alt={logo.name}
                 width={160}
                 height={64}
-                className={`w-auto max-w-[160px] object-contain grayscale opacity-40 group-hover:opacity-100 group-hover:drop-shadow-[0_0_12px_rgba(73,197,182,0.7)] transition-all duration-500${noInvert ? "" : " invert"}`}
+                className={`w-auto max-w-[160px] object-contain group-hover:opacity-100 group-hover:drop-shadow-[0_0_12px_rgba(73,197,182,0.7)] transition-all duration-500 ${
+                  preserveColor ? "opacity-70" : `grayscale opacity-40${noInvert ? "" : " invert"}`
+                }`}
                 style={{ height: `${scale * BASE_REM}rem` }}
                 unoptimized
               />

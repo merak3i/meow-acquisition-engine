@@ -15,6 +15,7 @@ export type FocusRailItem = {
   imageSrc: string;        // YouTube maxresdefault URL or "" for placeholder
   href?: string;
   meta?: string;
+  logoSrc?: string;
   videoId?: string;        // YouTube video ID — enables lazy nocookie embed on click
 };
 
@@ -317,6 +318,13 @@ export function FocusRail({
                 transition={{ duration: 0.3 }}
                 className="space-y-2"
               >
+                {activeItem.logoSrc && (
+                  <img
+                    src={activeItem.logoSrc}
+                    alt=""
+                    className="mb-3 max-h-10 max-w-[220px] object-contain"
+                  />
+                )}
                 {activeItem.meta && (
                   <span className="text-xs font-medium uppercase tracking-wider text-[#49c5b6]">
                     {activeItem.meta}

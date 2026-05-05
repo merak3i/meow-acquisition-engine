@@ -27,6 +27,7 @@ function toRailItem(site: (typeof clientWebsites)[number]): FocusRailItem {
     meta:        site.industry,
     imageSrc:    site.screenshot,
     href:        site.url,
+    logoSrc:     site.logo || undefined,
     // no videoId — center-card click opens site URL via focus-rail's href fallback
   };
 }
